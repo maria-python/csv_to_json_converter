@@ -110,6 +110,8 @@ Junior Python Automation / Tech Assistant
 
 ## ✉️ Contacts
 
+Gmail: maria.ladesigner@gmail.com
+
 LinkedIn: www.linkedin.com/in/maria-ilnitska
 
 Telegram: @mariailnitska
