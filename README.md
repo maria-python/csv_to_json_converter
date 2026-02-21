@@ -80,7 +80,7 @@ John,28,New York
 
 ## 🛠 Technologies Used
 
-- Python 3
+- Python 3.9.6
 - Built-in libraries:
   - `csv`
   - `json`
