@@ -2,13 +2,15 @@
 
 A lightweight Python CLI utility that converts CSV files into structured JSON format.
 
+## Overview
+
 This project demonstrates:
 - File handling in Python
 - Working with built-in `csv` and `json` modules
 - Command-line arguments (`sys.argv`)
 - Basic data transformation
 
-## 🚀 Features
+## Features
 
 - Converts any CSV file into JSON
 - Preserves column headers as JSON keys
@@ -16,7 +18,7 @@ This project demonstrates:
 - Simple command-line usage
 
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 csv_to_json_converter/
@@ -27,7 +29,7 @@ csv_to_json_converter/
 └── README.md
 ```
 
-## ▶️ How to Run
+## How to Run
 
 1. Navigate to the project folder:
 
@@ -47,7 +49,7 @@ Example:
 python3 csv_to_json.py sample.csv output.json
 ```
 
-## 📄 Example Input (sample.csv)
+## Example Input (sample.csv)
 
 ```csv
 name,age,city
@@ -56,7 +58,7 @@ Alex,30,London
 John,28,New York
 ```
 
-## 📄 Example Output (output.json)
+## Example Output (output.json)
 
 ```json
 [
@@ -78,7 +80,7 @@ John,28,New York
 ]
 ```
 
-## 🛠 Technologies Used
+## Tech Stack
 
 - Python 3.9.6
 - Built-in libraries:
@@ -86,7 +88,7 @@ John,28,New York
   - `json`
   - `sys`
 
-## 🎯 Why This Project?
+## Why This Project?
 
 This project was created as part of hands-on practice with:
 
@@ -95,14 +97,14 @@ This project was created as part of hands-on practice with:
 - CLI tool development
 - Git & GitHub workflow
 
-## 📌 Future Improvements
+## Future Improvements
 
 - Add error handling (missing file, wrong format)
 - Support custom delimiters
 - Add logging
 - Package as installable CLI tool
 
-## 🙋🏼‍♀️ Author
+## The Author
 
 Mariia Ilnitska
 
