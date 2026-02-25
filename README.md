@@ -20,7 +20,7 @@ Teams need a simple, reliable data transformation utility that standardizes this
 
 ## Solution
 
-The **CSV to JSON Converter** automates structured file transformation using Python.
+The CSV to JSON Converter automates structured file transformation using Python.
 
 The system:
 
@@ -44,7 +44,7 @@ This ensures consistent and repeatable data conversion suitable for development 
 - Lightweight and dependency-free (built-in libraries only)  
 
 
-## Technical Architecture
+## Tech Architecture
 
 The project demonstrates:
 
@@ -65,7 +65,6 @@ The design reflects small internal automation tools used in technical support en
   - `json`
   - `sys`
 
----
 
 ## Project Structure
 
@@ -78,7 +77,6 @@ csv_to_json_converter/
 └── README.md
 ```
 
----
 
 ## Installation
 
@@ -91,7 +89,6 @@ git clone https://github.com/yourusername/csv_to_json_converter.git
 cd csv_to_json_converter
 ```
 
----
 
 ## Usage
 
@@ -99,12 +96,6 @@ Run the script with input and output file arguments:
 
 ```
 python3 csv_to_json.py input.csv output.json
-```
-
-### Example:
-
-```
-python3 csv_to_json.py sample.csv output.json
 ```
 
 
