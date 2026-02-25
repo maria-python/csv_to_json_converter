@@ -139,3 +139,15 @@ python main.py
 
 
 ## Author
+
+Mariia Ilnitska
+
+Junior Python Automation / Tech Assistant
+
+**✉️ Contacts**
+
+Gmail: maria.ilnitska11@gmail.com
+
+LinkedIn: [www.linkedin.com/in/maria-ilnitska](http://www.linkedin.com/in/maria-ilnitska)
+
+Telegram: @mariailnitska
