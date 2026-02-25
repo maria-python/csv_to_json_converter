@@ -1,119 +1,141 @@
-# CSV to JSON Converter
+# CSV to MySQL Loader
 
-A lightweight Python CLI utility that converts CSV files into structured JSON format.
+Backend automation tool that securely loads structured CSV data into a MySQL database with validation, transaction handling, and execution logging.
 
-## Overview
+Designed to simulate real-world data ingestion workflows performed by technical support and backend teams.
 
-This project demonstrates:
-- File handling in Python
-- Working with built-in `csv` and `json` modules
-- Command-line arguments (`sys.argv`)
-- Basic data transformation
 
-## Features
+## Business Problem
 
-- Converts any CSV file into JSON
-- Preserves column headers as JSON keys
-- Pretty-prints JSON output
-- Simple command-line usage
+In many IT teams, structured data (reports, exports, logs, external datasets) is delivered in CSV format and must be manually imported into relational databases.
 
+Manual import processes:
+- Increase the risk of human error  
+- Lack validation and consistency  
+- Are inefficient for recurring workflows  
+- Provide limited visibility into failures  
+
+Teams need a reliable and repeatable data ingestion process.
+
+
+## Solution
+
+The **CSV to MySQL Loader** automates structured data ingestion into a MySQL database using Python.
+
+The system:
+
+- Reads structured CSV input files  
+- Validates and prepares records  
+- Establishes a secure database connection  
+- Automatically creates a target table (if missing)  
+- Inserts records using parameterized SQL queries  
+- Handles transactions with proper commit/rollback logic  
+- Logs execution status for monitoring and debugging  
+
+This ensures safe, repeatable, and production-style data loading.
+
+
+## Key Features
+
+- Secure MySQL integration using `mysql-connector-python`  
+- Parameterized queries (SQL injection prevention)  
+- Transaction control (commit / rollback)  
+- Automatic table creation  
+- Structured error handling  
+- Clean modular code separation  
+- Backend workflow simulation  
+- Logging of execution results  
+
+
+## Tech Architecture
+
+The project follows a modular structure separating:
+
+- Database configuration  
+- Connection management  
+- Data processing logic  
+- Execution control  
+
+This mirrors real backend support environments where maintainability and clarity are essential.
+
+
+## Tech Stack
+
+- Python 3.9.6  
+- MySQL  
+- mysql-connector-python  
+- CSV module
+  
 
 ## Project Structure
 
 ```
-csv_to_json_converter/
+csv_to_mysql_loader/
 │
-├── csv_to_json.py
-├── sample.csv
-├── output.json
+├── main.py              # Entry point
+├── db_config.py         # Database configuration
+├── sample.csv           # Example input dataset
+├── requirements.txt
 └── README.md
 ```
 
-## How to Run
 
-1. Navigate to the project folder:
+## Installation
 
-```bash
-cd csv_to_json_converter
+1. Clone the repository:
+
+```
+git clone https://github.com/maria-python/csv_to_mysql_loader.git
+cd csv_to_mysql_loader
 ```
 
-2. Run the script:
+2. Install dependencies:
 
-```bash
-python3 csv_to_json.py input.csv output.json
+```
+pip install -r requirements.txt
 ```
 
-Example:
+3. Configure database credentials inside `db_config.py`  
+4. Ensure the target MySQL database exists  
 
-```bash
-python3 csv_to_json.py sample.csv output.json
+
+## Usage
+
+Run the script:
+
+```
+python main.py
 ```
 
-## Example Input (sample.csv)
+### Workflow:
 
-```csv
-name,age,city
-Maria,23,Madrid
-Alex,30,London
-John,28,New York
-```
+1. Place structured CSV file in the project directory  
+2. Run the loader script  
+3. The system:
+   - Connects to MySQL  
+   - Creates the target table (if needed)  
+   - Inserts validated records  
+   - Commits the transaction  
+   - Logs the execution result  
 
-## Example Output (output.json)
 
-```json
-[
-    {
-        "name": "Maria",
-        "age": "23",
-        "city": "Madrid"
-    },
-    {
-        "name": "Alex",
-        "age": "30",
-        "city": "London"
-    },
-    {
-        "name": "John",
-        "age": "28",
-        "city": "New York"
-    }
-]
-```
+## Results 
 
-## Tech Stack
+- Eliminates manual database imports  
+- Reduces data entry errors  
+- Demonstrates backend automation workflow  
+- Simulates real IT technical assistant responsibilities  
+- Improves data ingestion reliability  
 
-- Python 3.9.6
-- Built-in libraries:
-  - `csv`
-  - `json`
-  - `sys`
-
-## Why This Project?
-
-This project was created as part of hands-on practice with:
-
-- Python scripting
-- Data transformation
-- CLI tool development
-- Git & GitHub workflow
 
 ## Future Improvements
 
-- Add error handling (missing file, wrong format)
-- Support custom delimiters
-- Add logging
-- Package as installable CLI tool
+- CLI arguments for dynamic file selection  
+- Batch insert optimization for large datasets  
+- Logging module integration  
+- Docker containerization  
+- Scheduled automation via cron  
+- Integration with cloud databases  
 
-## The Author
 
-Mariia Ilnitska
-
-Junior Python Automation / Tech Assistant
-
-## ✉️ Contacts
-
-Gmail: maria.ladesigner@gmail.com
-
-LinkedIn: www.linkedin.com/in/maria-ilnitska
-
-Telegram: @mariailnitska
+## Author
